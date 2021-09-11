@@ -1,0 +1,82 @@
+/* crayons */
+.crayons-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #000;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-transform: uppercase;
+  outline: none;
+  @include prefixer(border-radius, 5px, webkit moz o ms);
+  @include prefixer(transition, all .3s ease-in, webkit moz o ms);
+
+  &:hover {
+    background-color: $mainColor;
+    color: #FFF;
+    border-color: $mainColor !important;
+  }
+}
+
+/* End of crayons */
+
+/* Start Explore button */
+.explore {
+  background-color: #000;
+  font-size: 18px;
+  color: $mainColor;
+  @include prefixer(border-radius, 0px, webkit moz o ms);
+}
+/* End Explore button */
+
+/* Media query */
+
+// Extra small devices
+@media (max-width : 575.98px) {
+  /* crayons */
+  .crayons-btn {
+    padding: 7px 17px;
+  }
+  /* End of crayons */
+
+  /* Explore button in extra small*/
+  .explore {
+    font-size: 16px;
+  }
+  /* End of Explore button in extra small*/
+}
+
+// Small devices
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  /* crayons */
+  .crayons-btn {
+    padding: 7px 17px;
+  }
+  /* End of crayons */
+
+  /* Explore button in extra small*/
+  .explore {
+    font-size: 17px;
+  }
+  /* End of Explore button in extra small*/
+}
+
+// Extra large devices 
+@media (min-width: 1500px) {
+
+    /* crayons */
+    .crayons-btn {
+      padding: 10px 20px;
+    }
+
+    /* End of crayons */
+
+    /* Explore button in extra large*/
+    .explore {
+      font-size: 25px;
+    }
+
+    /* End of Explore button in extra large*/
+}
+
+/* End of Media query */

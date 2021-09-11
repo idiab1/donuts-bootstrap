@@ -15,10 +15,6 @@
                 color: #585858;
                 text-transform: uppercase;
                 @include prefixer(transition, all .3s ease-in, webkit moz o ms);
-                @media (max-width : 992px){
-                    font-size: 23px;
-                    padding: 2px 0;
-                }
                 &:hover {
                     color: $mainColor;
                 }
@@ -29,12 +25,7 @@
         }
     }
     .phone{
-        margin-right : 40px;
         color: #585858 !important;
-        @media (max-width : 992px){
-            margin: 20px 0;
-            text-align: center !important;
-        }
     }
     .cart-items{
         padding: .5rem 1rem;
@@ -46,12 +37,7 @@
         &:hover {
             color: #585858;
         }
-        @media (max-width : 992px){
-            margin-left: 0px;
-            margin: auto;
-            margin-bottom: 25px;
-            width: 180px;
-        }
+        
         i{
             padding-right : 10px;
         }
@@ -62,10 +48,150 @@
         }
     }
 }
-
 /* End of navbar */
 
 .scrolled{
     box-shadow: 0px 4px 5px 1px rgb(0 0 0 / 15%);
     padding: .25rem 1rem;
+}
+
+// Extra small devices
+@media (max-width : 575.98px) {
+    /* Navbar in extra small*/
+    .navbar {
+        .navbar-brand {
+        }
+
+        .navbar-collapse{
+            padding: .75rem 0;
+        }
+
+        .navbar-nav {
+            text-align: center;
+            .nav-item {
+                .nav-link {
+                    font-size: 15px;
+                    font-weight: 400;
+
+                    &.active {
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+
+        .cart-items {
+            text-align: center;
+            width: 75%;
+            margin: 10px auto;
+        }
+    }
+
+    /* End of navbar in extra small*/
+}
+
+// Small devices
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Navbar in small*/
+    .navbar {
+        .navbar-toggler {
+            padding: 0.25rem 0.5rem;
+        }
+
+        .navbar-nav {
+            text-align: center;
+
+            .nav-item {
+                .nav-link {
+                    padding: .3rem;
+
+                    &.active {
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+
+        .cart-items {
+            text-align: center;
+            width: 45%;
+            margin: 10px auto;
+        }
+    }
+
+    /* End of navbar in small*/
+}
+
+// Medium devices 
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Navbar in Medium*/
+    .navbar {
+        .navbar-nav {
+            text-align: center;
+            .nav-item {
+                .nav-link {
+                    padding: .3rem;
+                    &.active {
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+
+        .cart-items {
+            text-align: center;
+            width: 25%;
+            margin: 15px auto;
+        }
+    }
+    /* End of navbar in Medium*/
+}
+
+// Large devices 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+}
+
+// Extra large devices 
+@media (min-width: 1500px) {
+    /* Navbar in small*/
+    .navbar {
+        .navbar-brand {
+            width: 60px;
+        }
+        .navbar-nav {
+            text-align: center;
+
+            .nav-item {
+                .nav-link {
+                    font-size: 23px;
+                    padding: .5rem 1rem;
+                    &:hover {
+                        color: $mainColor;
+                    }
+
+                    &.active {
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+
+        .cart-items {
+            padding: 1rem;
+            &:hover {
+                color: #585858;
+            }
+
+            i {
+                font-size: 20px;
+            }
+
+            h5 {
+                font-size: 23px;
+            }
+        }
+    }
+
+    /* End of navbar in small*/
 }

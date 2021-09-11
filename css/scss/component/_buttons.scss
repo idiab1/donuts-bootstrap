@@ -8,7 +8,7 @@
   text-transform: uppercase;
   outline: none;
   @include prefixer(border-radius, 5px, webkit moz o ms);
-  @include prefixer(transition, all .3s ease-in, webkit moz o ms);
+  @include prefixer(transition, all .25s ease-in, webkit moz o ms);
 
   &:hover {
     background-color: $mainColor;
@@ -28,6 +28,23 @@
 }
 /* End Explore button */
 
+/* Explore button exist in about section */
+.about-explore {
+  padding: 8px 15px;
+  background-color: $mainColor;
+  font-size: 16px;
+  color: #FFF;
+  border-color: $mainColor !important;
+  &:hover {
+    background-color: #000;
+    color: $mainColor;
+    border-color: #000 !important;
+  }
+}
+
+/* End of Explore button exist in about section */
+
+
 /* Media query */
 
 // Extra small devices
@@ -41,6 +58,10 @@
   /* Explore button in extra small*/
   .explore {
     font-size: 16px;
+  }
+  .about-explore {
+    padding: 7px 14px;
+    font-size: 15px;
   }
   /* End of Explore button in extra small*/
 }
@@ -58,6 +79,33 @@
   .explore {
     font-size: 17px;
   }
+  .about-explore {
+    padding: 7px 16px;
+    font-size: 15px;
+  }
+  /* End of Explore button in extra small*/
+}
+
+// Small devices
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* crayons */
+  .crayons-btn {
+    padding: 7px 17px;
+  }
+
+  /* End of crayons */
+
+  /* Explore button in extra small*/
+  .explore {
+    font-size: 17px;
+  }
+
+  .about-explore {
+    padding: 7px 14px;
+    font-size: 15px;
+  }
+
   /* End of Explore button in extra small*/
 }
 
@@ -76,6 +124,10 @@
       font-size: 25px;
     }
 
+    .about-explore {
+      padding: 10px 25px;
+      font-size: 18px;
+    }
     /* End of Explore button in extra large*/
 }
 

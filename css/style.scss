@@ -1,0 +1,20 @@
+// -> Variable
+@import 'scss/helpers/variables';
+
+// -> Extends
+@import 'scss/helpers/extends';
+
+// -> Mixins
+@import 'scss/helpers/mixins';
+
+// -> Global rules
+@import 'scss/pages/global';
+
+// -> Buttons 
+@import 'scss/component/buttons';
+
+// -> Navbar
+@import 'scss/layout/navbar';
+
+// -> Header
+@import 'scss/layout/header';

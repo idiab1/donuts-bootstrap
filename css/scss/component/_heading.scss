@@ -1,0 +1,13 @@
+.heading-title {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #FFF;
+    span {
+        color: $mainColor;
+        font : {
+            weight: bold;
+            size: 65px;
+        }
+
+    }
+}

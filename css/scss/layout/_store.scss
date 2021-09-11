@@ -1,0 +1,100 @@
+/* Start Store */
+.store{
+  padding : 50px 0;
+  background: $greyColor;
+  .heading-title{
+    padding-bottom : 20px;
+  }
+  .store-control{
+    // 
+  }
+  form {
+    padding : 35px 0;
+    
+    i{
+      background: $mainColor;
+      color: #000;
+      padding: 13px;
+      font-weight: 600;
+      width: 60px;
+      margin : -5px;
+    }
+    .input-item{
+      display: inline-block;
+      padding: 8px 0;
+      text-indent: 10px;
+      width: 45%;
+      height: calc(1.5em + 0.75rem + .45rem);
+      border : 1px solid rgb(150, 150, 150);
+      @include prefixer(border-radius, 0px, webkit moz o ms);
+    }
+  }
+  .store-item {
+    position: relative;
+    overflow : hidden;
+    margin : 15px 0; 
+    @include prefixer(box-shadow, 0px 0px 5px 1px #dfdfdf, webkit moz o ms);
+    @include prefixer(border-radius, 5px, webkit moz o ms);
+    
+    .img-item{
+      position : relative;
+      overflow : hidden;
+      img {
+        cursor : pointer;
+        @include prefixer(transition, all .6s ease-in-out, webkit moz o ms);
+      }
+      &:hover img{
+        @include prefixer(transform, scale(1.2), webkit moz o ms);
+      }
+
+      .store-item-icon {
+        position: absolute;
+        right: -40px;
+        bottom: -50px;
+        width: 40px;
+        height: 50px;
+        background: $yellowColor;
+        color: #000;
+        text-align: center;
+        line-height: 50px;
+        @include prefixer(transition, all .6s ease-in-out, webkit moz o ms);
+        @include prefixer(border-top-left-radius, 15px, webkit moz o ms);
+        cursor: pointer;
+        opacity: 0;
+        i {
+          color : #000;
+          @include prefixer(transition, all .5s ease-in-out, webkit moz o ms);
+          &:hover{
+            color : #FFF;
+          }
+        }
+      }
+      &:hover .store-item-icon {
+        right: 0px;
+        bottom: 0px;
+        opacity: 1;
+      }
+
+    }
+    .item-info{
+      padding : 30px 15px;
+      background :#FFF;
+      
+      span{
+        font-size : 20px;
+        letter-spacing : 1px;
+        
+        &:last-of-type{
+          position: absolute;
+          right: 30px;
+          font-weight : 600;
+        }
+      }
+    }
+  }
+
+
+
+}
+
+/* End Store */

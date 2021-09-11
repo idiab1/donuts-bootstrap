@@ -59,11 +59,9 @@
 @media (max-width : 575.98px) {
     /* Navbar in extra small*/
     .navbar {
-        .navbar-brand {
-        }
 
-        .navbar-collapse{
-            padding: .75rem 0;
+        .navbar-toggler {
+            padding: 0.25rem 0.5rem;
         }
 
         .navbar-nav {

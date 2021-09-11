@@ -1,0 +1,24 @@
+/* About section */
+.about {
+    padding: 50px 0;
+    .about-content {
+        padding: 50px 0;
+        .heading-title {
+            color: #000;
+        }
+        p {
+            color: #585858;
+            line-height: 1.7;
+            font-size: 16px;
+            font-style: italic;
+            margin: 0;
+            font-family: 'Open Sans';
+            padding-bottom: 1rem;
+        }
+    }
+    .about-image {
+        border: 10px solid $mainColor;
+    }
+}
+/* End of About section */
+

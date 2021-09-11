@@ -11,7 +11,7 @@
         .nav-item{
             .nav-link{
                 font-size: 16px;
-                font-weight: 500;
+                font-weight: 600;
                 color: #585858;
                 text-transform: uppercase;
                 @include prefixer(transition, all .3s ease-in, webkit moz o ms);

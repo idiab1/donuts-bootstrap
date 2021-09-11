@@ -1,3 +1,4 @@
+/* Header */
 .header {
     width: 100%;
     height: 700px;
@@ -35,3 +36,100 @@
     }
 
 }
+
+/* End of header */
+
+/* Media query */
+
+// Extra small devices
+@media (max-width : 575.98px) {
+
+    /* Header in extra small*/
+    .header {
+        .header-info {
+            padding: 25px 0;
+            width: auto;
+            margin: auto;
+            h1 {
+                font-size: 40px;
+                margin-bottom: 10px;
+                span {
+                    font-size: 45px;
+                }
+            }
+        }
+
+    }
+    /* End of Header in extra small*/
+}
+
+// Small devices
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    /* Header in small*/
+    .header {
+        .header-info {
+            padding: 25px 0;
+            margin: auto;
+            h1 {
+                font-size: 40px;
+                margin-bottom: 10px;
+                span {
+                    font-size: 45px;
+                }
+            }
+        }
+
+    }
+    /* End of Header in small*/
+}
+
+// Medium devices 
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Header in Medium*/
+    .header {
+        .header-info {
+            padding: 25px 0;
+            margin: auto;
+
+            h1 {
+                font-size: 45px;
+                margin-bottom: 10px;
+                span {
+                    font-size: 50px;
+                }
+            }
+        }
+
+    }
+    /* End of Header in Medium*/
+}
+
+// Large devices 
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+// Extra large devices 
+@media (min-width: 1500px) {
+
+    /* Header in small*/
+    .header {
+        .header-info {
+            padding: 35px 0;
+            width: 65%;
+            h1 {
+                font-size: 55px;
+                margin-bottom: 15px;
+                span {
+                    font-size: 60px;
+                }
+            }
+        }
+
+    }
+    /* End of Header in small*/
+}
+
+
+
+/* End of Media Query */

@@ -68,6 +68,17 @@
   }
 
 }
+.search-btn{
+  background-color: $mainColor;
+  margin-left: -4px;
+  padding: .61rem 1.75rem;
+  border: none;
+  @include prefixer(border-radius, 0px, webkit moz o ms);
+
+  &:focus {
+    outline: none;
+  }
+}
 
 /* End of Explore button exist in store section */
 

@@ -3,30 +3,28 @@
   padding : 50px 0;
   background: $greyColor;
   .heading-title{
-    padding-bottom : 20px;
+    margin-bottom: 1.2rem;
   }
-  .store-control{
-    // 
-  }
+  
   form {
     padding : 35px 0;
-    
+    width: 85%;
+    margin: auto;
     i{
-      background: $mainColor;
       color: #000;
-      padding: 13px;
-      font-weight: 600;
-      width: 60px;
-      margin : -5px;
     }
     .input-item{
       display: inline-block;
       padding: 8px 0;
       text-indent: 10px;
-      width: 45%;
+      width: 60%;
+      outline: none;
       height: calc(1.5em + 0.75rem + .45rem);
       border : 1px solid rgb(150, 150, 150);
       @include prefixer(border-radius, 0px, webkit moz o ms);
+      &:focus{
+        outline: none;
+      }
     }
   }
   .store-item {
@@ -74,7 +72,6 @@
         bottom: 0px;
         opacity: 1;
       }
-
     }
     .item-info{
       padding : 30px 15px;
@@ -93,8 +90,147 @@
     }
   }
 
-
-
 }
 
 /* End Store */
+
+/* Media Query */
+
+// Extra small devices
+@media (max-width : 575.98px) {
+
+  /* Store in extra small*/
+  .store {
+    padding: 30px 0;
+
+    .heading-title {
+      margin-bottom: 1rem;
+      font-size: 45px;
+    }
+
+    form {
+      padding: 25px 0;
+      width: 100%;
+      .input-item {
+        width: 78%;
+      }
+    }
+
+    
+  }
+
+  /* End of Store in extra small*/
+}
+
+// Small devices
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  /* Store in small*/
+  .store {
+    padding: 40px 0;
+
+    .heading-title {
+      margin-bottom: 1rem;
+      font-size: 45px;
+    }
+
+    form {
+      padding: 25px 0;
+      width: 100%;
+
+      .input-item {
+        width: 85%;
+      }
+    }
+
+  }
+  /* End of Store in small*/
+}
+
+// Medium devices 
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* Store in Medium*/
+  .store {
+    padding: 40px 0;
+
+    .heading-title {
+      margin-bottom: 1rem;
+      font-size: 45px;
+    }
+
+    form {
+      padding: 25px 0;
+      width: 100%;
+
+      .input-item {
+        width: 75%;
+      }
+    }
+
+  }
+  /* End of Store in Medium*/
+}
+
+// Large devices 
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+// Extra large devices 
+@media (min-width: 1500px) {
+
+  /* Store in small*/
+  .store {
+    padding: 60px 0;
+
+    .heading-title {
+      margin-bottom: 1.7rem;
+      font-size: 60px;
+    }
+
+    form {
+      padding : 35px 0;
+      width: 85%;
+      margin: auto;
+      i{
+        color: #000;
+      }
+      .input-item{
+        font-size: 25px;
+        width: 85%;
+        height: calc(1.5em + 0.75rem + 1.45rem);
+      }
+    }
+
+    .store-item {
+
+      .img-item {
+        .store-item-icon {
+          font-size: 25px;
+          width: 65px;
+          height: 70px;
+          line-height: 70px;
+          
+        }
+
+        &:hover .store-item-icon {
+          right: 0px;
+          bottom: 0px;
+          opacity: 1;
+        }
+      }
+
+      .item-info {
+        padding: 35px 25px;
+        span {
+          font-size: 28px;
+        }
+      }
+    }
+
+  }
+  /* End of Store in small*/
+}
+
+
+
+/* End of Media Query */

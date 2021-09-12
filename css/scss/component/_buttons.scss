@@ -101,6 +101,16 @@
     font-size: 15px;
   }
   /* End of Explore button in extra small*/
+
+  .store-btn {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .search-btn {
+    padding: 0.61rem 1.5rem;
+  }
+
 }
 
 // Small devices
@@ -120,6 +130,13 @@
     padding: 7px 16px;
     font-size: 15px;
   }
+
+  .store-btn {
+    font-size: 14px;
+    margin: 5px;
+    padding: 7px 10px;
+  }
+
   /* End of Explore button in extra small*/
 }
 
@@ -141,6 +158,11 @@
   .about-explore {
     padding: 7px 14px;
     font-size: 15px;
+  }
+  .store-btn {
+    font-size: 14px;
+    margin: 5px;
+    padding: 7px 10px;
   }
 
   /* End of Explore button in extra small*/
@@ -166,6 +188,18 @@
       font-size: 18px;
     }
     /* End of Explore button in extra large*/
+
+    .store-btn {
+      font-size: 22px;
+      padding: 14px 22px;
+    }
+    .search-btn {
+      padding: 1.25rem 1.75rem;
+      margin-bottom: 9px;
+      font-size: 23px;
+
+    }
+
 }
 
 /* End of Media query */

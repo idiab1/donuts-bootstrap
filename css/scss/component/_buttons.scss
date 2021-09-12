@@ -15,6 +15,9 @@
     color: #FFF;
     border-color: $mainColor !important;
   }
+  &:focus{
+    outline: none;
+  }
 }
 
 /* End of crayons */
@@ -23,7 +26,7 @@
 .explore {
   background-color: #000;
   font-size: 18px;
-  color: $mainColor;
+  color: #fff;
   @include prefixer(border-radius, 0px, webkit moz o ms);
 }
 /* End Explore button */
@@ -37,13 +40,36 @@
   border-color: $mainColor !important;
   &:hover {
     background-color: #000;
-    color: $mainColor;
+    color: #fff;
     border-color: #000 !important;
   }
 }
 
 /* End of Explore button exist in about section */
 
+/* Explore button exist in store section */
+.store-btn {
+  padding: 6px 14px;
+  margin: 0 5px;
+  background-color: transparent;
+  font-size: 16px;
+  color: #000;
+  border-color: #000 !important;
+  &:hover {
+    background-color: $mainColor ;
+    color: #fff;
+    border-color: $mainColor !important;
+  }
+
+  &.active{
+    background-color: $mainColor;
+    color: #fff;
+    border-color: $mainColor !important;
+  }
+
+}
+
+/* End of Explore button exist in store section */
 
 /* Media query */
 

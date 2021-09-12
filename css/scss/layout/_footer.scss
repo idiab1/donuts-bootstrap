@@ -1,0 +1,87 @@
+/* Start Footer */
+.footer{
+    .social{
+        padding : 50px 0;
+        background-color: #000;
+        color : #FFF;
+        .social-content {
+            .heading-title{
+                color: $mainColor;
+                margin-bottom: 4rem;
+            }
+            ul {
+                margin: 20px 0;
+                li{
+                    display : inline-block;
+                    padding : 0 35px;
+                    a{
+                        color : #FFF;
+                        i{
+                            font-size: 25px;
+                            @include prefixer(transition, all .4s ease-in-out, webkit moz o ms);
+                            &.fa-facebook-f:hover{
+                                color: #3b5998;
+                            }
+                            &.fa-instagram:hover {
+                                color: #e1306c;
+                            }
+                            &.fa-twitter:hover {
+                                color: #1da1f2;
+                            }
+                            &.fa-linkedin-in:hover {
+                                color: #0077b5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .contact{
+        padding : 50px 30px;
+        background-color: $greyColor;
+        ul {
+            margin: 20px 0;
+            li{
+                padding :10px 0;
+                display: block;
+                font-family: 'Open Sans';
+                i{
+                    padding-right: 10px;
+                    font-size: 20px;
+                }
+                span{
+                    color: #4f4f4f;
+                    font-size: 15px;
+                    font-weight: 400;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+        
+}
+/* End Footer */
+/* Start Copyright */
+.copyright{
+    padding : 30px 0; 
+    border-top : 1px solid #cfcfcf;
+    font-family: 'Open Sans';
+    .copyright-info{
+        p {
+            text-transform: capitalize;
+            font-size: 17px;
+            margin: 0;
+            color: #545454;
+
+            a {
+                color: $mainColor;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+/* End Copyright */

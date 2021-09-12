@@ -19,7 +19,68 @@
             margin: 0;
             font-size: 18px;
             font-family: "Open Sans";
+            color: #d8d8d8;
         }
     }
 }
 /* End of Services section */
+
+/* Media query */
+
+// Extra small devices
+@media (max-width : 575.98px) {
+
+    /* Services in extra small*/
+    .services {
+        padding: 30px 0;
+        .service-item {
+            margin-bottom: 15px;
+
+            h3 {
+                font-size: 23px;
+                padding: 10px 0;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    /* End of Services in extra small*/
+}
+
+// Small devices
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    /* Services in small*/
+    .services {
+        padding: 30px 0;
+
+    }
+    /* End of Services in small*/
+}
+
+// Extra large devices 
+@media (min-width: 1500px) {
+
+    /* Services in Extra large*/
+    .services {
+        padding: 60px 0;
+        .service-item {
+            margin: 0;
+            img{
+                width: 100px;
+            }
+            h3 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+        }
+    }
+    /* End of Services in Extra large*/
+}
+
+/* End of Media Query */

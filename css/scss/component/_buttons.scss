@@ -82,6 +82,26 @@
 
 /* End of Explore button exist in store section */
 
+/* Start Order Button */
+.order-button {
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid $mainColor;
+  background-color: $mainColor;
+  color: #fff;
+  @include prefixer(transition, all .3s ease-in, webkit moz o ms);
+  @include prefixer(border-radius, 5px, webkit moz o ms);
+
+  &:hover {
+    background-color: $mainColor;
+    color: #000;
+  }
+}
+
+/* End Order Button */
+
+
 /* Media query */
 
 // Extra small devices

@@ -35,7 +35,7 @@
         cursor : pointer;
         @include prefixer(transition, all .3s ease-in-out, webkit moz o ms);
         &:hover {
-            color: #585858;
+            color: #000;
         }
         
         i{

@@ -36,6 +36,15 @@ navLinks.forEach((navLink) => {
   });
 });
 
+// Smooth scroll to section by data scroll
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    let section = document.getElementById(navLink.getAttribute("data-scroll"));
+    scrolling(section);
+  });
+});
+
 // Scroll to store section when click on explore button
 // Select on explore button
 const exploreBtn = document.getElementById("explore-btn");
@@ -46,7 +55,7 @@ function scrolling(element) {
   window.scrollTo({
     behavior: "smooth",
     left: 0,
-    top: element.offsetTop - 30,
+    top: element.offsetTop - 50,
   });
 }
 exploreBtn.addEventListener("click", () => {

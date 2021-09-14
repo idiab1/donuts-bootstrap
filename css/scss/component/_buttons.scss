@@ -101,6 +101,33 @@
 
 /* End Order Button */
 
+/* Start button to top */
+.button-top {
+  position: fixed;
+  bottom: 60px;
+  right: 45px;
+  background-color: $mainColor;
+  color: #FFF;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: none;
+  @include prefixer(transition, all .25s ease-in, webkit moz o ms);
+  @include prefixer(box-shadow, 0px 0px 5px 1px rgb(0 0 0 / 23%), webkit moz o ms);
+  cursor: pointer;
+  &:hover {
+    color: #000;
+  }
+
+  i {
+    
+    font-weight: 600;
+  }
+}
+
+/* End button to top */
+
 
 /* Media query */
 
@@ -131,6 +158,11 @@
     padding: 0.61rem 1.5rem;
   }
 
+  .button-top {
+    bottom: 35px;
+    right: 25px;
+  }
+
 }
 
 // Small devices
@@ -158,6 +190,12 @@
   }
 
   /* End of Explore button in extra small*/
+  .button-top {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
 }
 
 // Small devices
@@ -224,7 +262,13 @@
       padding: 8px 13px;
       font-size: 22px;
     }
-
+    
+    .button-top {
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+      font-size: 22px;
+    }
 }
 
 /* End of Media query */

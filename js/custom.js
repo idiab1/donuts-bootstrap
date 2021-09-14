@@ -15,6 +15,27 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Adjust add and remove class active to navbar links
+// Select on all navbar links
+const navLinks = document.querySelectorAll(
+  ".navbar .navbar-nav .nav-item .nav-link"
+);
+/**
+ * Create for each on all links where when click on navbar link
+ * first step prevent default in anchor tag then select on active exists in nav-link
+ * second step check if active true remove this class otherwise add active class
+ * */
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const active = document.querySelector(".nav-link.active");
+    if (active) {
+      active.classList.remove("active");
+    }
+    e.currentTarget.classList.add("active");
+  });
+});
+
 // Scroll to store section when click on explore button
 // Select on explore button
 const exploreBtn = document.getElementById("explore-btn");

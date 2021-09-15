@@ -128,6 +128,44 @@
 
 /* End button to top */
 
+/* Start cart button */
+.btn-cart {
+  display: inline-block;
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid #000;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #000;
+  
+  @include prefixer(border-radius, 5px, webkit moz o ms);
+  @include prefixer(transition, all .3s ease-in, webkit moz o ms);
+
+  &:hover {
+    background: #000;
+    color: $mainColor;
+    text-decoration: none;
+  }
+  
+
+  &.clear-button {
+    margin-right: 5px;
+  }
+
+  &.checkout-button {
+    border: 1px solid $mainColor;
+    color: #fff;
+    margin-left: 5px;
+    background-color: $mainColor;
+    &:hover {
+      background: $mainColor;
+      text-decoration: none;
+    }
+  }
+
+}
+
+/* End cart button */
 
 /* Media query */
 
@@ -161,6 +199,10 @@
   .button-top {
     bottom: 35px;
     right: 25px;
+  }
+
+  .btn-cart {
+    padding: 5px;
   }
 
 }
@@ -262,13 +304,18 @@
       padding: 8px 13px;
       font-size: 22px;
     }
-    
+
     .button-top {
       width: 55px;
       height: 55px;
       line-height: 55px;
       font-size: 22px;
     }
+    .btn-cart {
+      padding: 10px 16px;
+      font-size: 18px;
+    }
+
 }
 
 /* End of Media query */

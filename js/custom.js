@@ -45,6 +45,24 @@ navLinks.forEach((navLink) => {
   });
 });
 
+// Show cart when click on cart items
+const cartItems = document.querySelector(".navbar .cart-items");
+// Select on the cart element
+const cart = document.querySelector(".cart");
+
+cartItems.addEventListener("click", function showHideCart() {
+  "use strict";
+  // Add & remove show-cart class
+  cart.classList.toggle("show-cart");
+  // check if cart element contains 'show-cart' class
+  // change color cartItems button to black else back to white
+  if (cart.classList.contains("show-cart")) {
+    cartItems.style.color = "#000";
+  } else {
+    cartItems.style.color = "#fff";
+  }
+});
+
 // Scroll to store section when click on explore button
 // Select on explore button
 const exploreBtn = document.getElementById("explore-btn");

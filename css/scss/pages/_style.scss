@@ -19,7 +19,12 @@
         overflow-y: scroll;
         .cart-item{
             margin-top: 20px;
+            margin-bottom: 20px;
             @extend .flex;
+            img{
+                width: 35px;
+                height: 35px;
+            }
             .item-text{
                 margin: 0px 30px;
                 width: 100px;

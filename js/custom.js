@@ -63,6 +63,93 @@ cartItems.addEventListener("click", function showHideCart() {
   }
 });
 
+// Add item to cart
+(function () {
+  "use strict";
+
+  const cartItemBtn = document.querySelectorAll(".store .store-item-icon");
+
+  cartItemBtn.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      if (e.target.parentElement.classList.contains("store-item-icon")) {
+        // Get the path of image item
+        let fullPathImg = e.target.parentElement.previousElementSibling.src;
+        let pos = fullPathImg.indexOf("img") + 3;
+        let partPath = fullPathImg.slice(pos);
+
+        // Get the name of item
+        let nameItem =
+          e.target.parentElement.parentElement.nextElementSibling.children[0]
+            .textContent;
+
+        // Get the price ot item
+        let priceItem =
+          e.target.parentElement.parentElement.nextElementSibling.children[1]
+            .textContent;
+
+        let finalPrice = priceItem.slice("1").trim();
+
+        // Data of the item
+        let item = {};
+
+        item.img = `images/img-cart${partPath}`;
+        item.name = nameItem;
+        item.price = finalPrice;
+
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+        cartItem.innerHTML = `
+          <img class="img-fluid rounded-circle" src="${item.img}" alt="${item.name}" />
+          <div class="item-text">
+            <p>${item.name}</p>
+            <span>$</span>
+            <span class="cart-item-price">${item.price}</span>
+          </div>
+          <a class="trash" href="#">
+            <i class="fas fa-trash"></i>
+          </a>
+        `;
+
+        // Select on total price
+        const itemsContent = document.querySelector(".cart .items-content");
+        const cartControl = document.querySelector(
+          ".cart .items-content .cart-control"
+        );
+
+        itemsContent.insertBefore(cartItem, cartControl);
+
+        alert("Item added to the cart");
+
+        showTotals();
+      }
+    });
+  });
+
+  // Show total price
+  function showTotals() {
+    const total = [];
+    const items = document.querySelectorAll(".cart-item-price");
+
+    items.forEach((item) => {
+      total.push(parseFloat(item.textContent));
+    });
+
+    const itemMoney = total.reduce(function (total, item) {
+      total += item;
+      return total;
+    }, 0);
+
+    const finalMoney = itemMoney.toFixed(2);
+
+    document.querySelector(".total .total-price-cart").textContent =
+      "$" + " " + finalMoney;
+    document.querySelector(".cart-items .cart-price").textContent =
+      "$" + " " + finalMoney;
+    document.querySelector(".cart-items .item-count").textContent =
+      total.length + " " + "items - " + " ";
+  }
+})();
+
 // Scroll to store section when click on explore button
 // Select on explore button
 const exploreBtn = document.getElementById("explore-btn");
